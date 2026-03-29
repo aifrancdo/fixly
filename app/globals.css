@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* ===== VARIABLES ===== */
+
+:root {
+  --bg: #e7e7e7;       /* 🔥 fons Notion */
+  --panel: #ffffff;    /* 🔥 cards blanques */
+  --text: #111111;
+  --border: #e5e5e5;   /* 🔥 línies suaus */
+
+  --primary: #f3f3f3;  /* botons suaus */
+}
+
+/* ===== BASE ===== */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* ===== PANEL (CARDS) ===== */
+
+.win-panel {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px; /* 🔥 això és clau */
+}
+
+/* ===== INPUT ===== */
+
+.win-input {
+  width: 100%;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid var(--border); /* 🔥 net */
+  font-size: 16px;
+  outline: none;
+}
+
+/* ===== BUTTON ===== */
+
+.win-button {
+  background: var(--primary);
+  color: var(--text);
+  border: 1px solid var(--border); /* 🔥 net */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+/* 🔥 HOVER SUAU (importantíssim) */
+.win-button:hover {
+  background: #eaeaea;
+}
+
+/* CLICK */
+.win-button:active {
+  background: #e0e0e0;
+}
+
+/* ===== BOTÓ IMPORTANT ===== */
+
+.win-button-primary {
+  background: #eaeaea;
+  border: 1px solid var(--border);
+}
+
+/* ===== TEXT ===== */
+
+.win-title {
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.win-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* ===== LAYOUT ===== */
+
+.win-container {
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.win-row {
+  display: flex;
+  gap: 10px;
+}
+
+.win-panel:hover {
+  background: #fafafa;
+  cursor: pointer;
+}
