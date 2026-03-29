@@ -74,9 +74,7 @@ export default function DashboardPage() {
   ]
   
   // 🔥 CALCULAR NOVES
-const novesCount = filteredJobs.filter(
-  job => !job.visits || job.visits.length === 0
-).length
+  const novesCount = jobs.filter((j: any) => j.status === "NOVES").length
 
   function getVisitDateTime(visit: any) {
     if (!visit?.date) return null
@@ -283,7 +281,7 @@ const tomorrowAgendaCount = jobs.filter(job => {
     count={novesCount}
     color="#f97316"
     icon={<Inbox size={18} color="#f97316" />}
-    onClick={() => router.push(`/jobs?filter=noves&empresa=${empresaFilter}`)}
+    onClick={() => router.push("/jobs?status=NOVES")}
   />
 
   {/* PENDENTS */}

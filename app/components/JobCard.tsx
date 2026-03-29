@@ -130,20 +130,19 @@ export default function JobCard({ job, onClick, onDone, search }: any) {
 
           {/* INFO */}
           <div style={{
-            fontSize: "11px",
-            color: "#999",
-            marginTop: "4px",
-            display: "flex",
-            gap: "10px"
-          }}>
-            <span>{highlight(job.empresa || "", search)}</span>
+  fontSize: "11px",
+  color: "#999",
+  marginTop: "4px",
+  display: "flex",
+  gap: "10px"
+}}>
+  <span>{job.empresa}</span>
 
-            {job.createdAt && (
-              <span style={{ color: getDaysColor(days) }}>
-                {days} dies
-              </span>
-            )}
-          </div>
+<span style={{ marginLeft: "6px" }}>
+  {job.incidentNumber ? `#${job.incidentNumber}` : "-"}
+</span>
+
+</div>
 
         </div>
 

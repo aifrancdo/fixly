@@ -14,7 +14,7 @@ export default function LoginPage() {
     alignItems: "center",
     justifyContent: "center",
     height: "100vh",
-    background: "#b1b1b1",
+    background: "#e5e5e5",
     fontFamily: '"JetBrains Mono", monospace'
   }}
 >
@@ -33,7 +33,7 @@ export default function LoginPage() {
 
 <div
   style={{
-    background: "#c0c0c0",
+    background: "#f0f0f0",
     padding: "30px",
     width: "350px",
     borderTop: "2px solid white",

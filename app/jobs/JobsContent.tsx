@@ -103,7 +103,9 @@ function getScore(job: any, search: string) {
 
     const s = (search || "").toLowerCase()
 
-    const matchStatus = status ? job.status === status : true
+    const matchStatus = status
+  ? job.status === status
+  : job.status !== "NOVES"
 
     const matchEmpresa =
       empresaFilter === "TOTES"

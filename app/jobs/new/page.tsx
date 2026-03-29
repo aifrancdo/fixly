@@ -17,8 +17,9 @@ export default function NewJobPage() {
   const [error, setError] = useState("")
 
   const [status, setStatus] = useState("PENDENTS")
-const [visitDate, setVisitDate] = useState("")
-const [visitTime, setVisitTime] = useState("")
+  const [visitDate, setVisitDate] = useState("")
+  const [visitTime, setVisitTime] = useState("")
+  const [incidentNumber, setIncidentNumber] = useState("")
 
   const handleSave = () => {
 
@@ -45,7 +46,7 @@ const [visitTime, setVisitTime] = useState("")
   phone,
   email,
   description,
-  status,
+  status: "PENDENTS",
   createdAt: new Date().toISOString(),
 
   visits: status === "PROGRAMAT" && visitDate
@@ -139,6 +140,18 @@ const [visitTime, setVisitTime] = useState("")
               <option value="ALTRES">ALTRES</option>
             </select>
           </div>
+
+          {/* INCIDENT */}
+<div style={{ marginBottom: "15px" }}>
+  <div style={{ fontSize: "12px", color: "#666", marginBottom: "4px" }}>
+    Nº INCIDÈNCIA
+  </div>
+  <input
+    className="win-input"
+    value={incidentNumber}
+    onChange={(e) => setIncidentNumber(e.target.value)}
+  />
+</div>
 
           {/* TITOL */}
           <div style={{ marginBottom: "15px" }}>
